@@ -1,0 +1,41 @@
+/* 头部input */
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+}
+.header .map{
+  background: rgba(0, 0, 0, .2);
+  padding: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.header input{
+  background: rgba(0, 0, 0, .2);
+  font-size: 30rpx;
+  color: white;
+  width: 55%;
+  font-weight: lighter;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 34px;
+  position: relative;
+}
+/* 搜索框设置 */
+.header input .search{
+  position: absolute;
+  left: 6px;
+  top: 8px;
+}
+swiper{
+  height: 350rpx;
+}
+swiper .slide-image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,3 +1,27 @@
 <!--pages/home/home.wxml-->
-<view bindtap='getLocation'>getLocation</view>
-<view>{{locationString}}</view>
+<view class='header'>
+  <view class='map'>
+    <block>
+      <icon bindtap='getLocation' type="download" size="30" color='#ddd' />
+    </block>
+  </view>
+  <input confirm-type="search" value='{{locationString}}'>
+    <view class='search'>
+      <block>
+        <icon type="search" size="20" color='#fff' />
+      </block>
+    </view>
+  </input>
+</view>
+<!-- 轮播组件 -->
+<swiper
+  autoplay='true'
+  interval='3000'
+  circular='true'
+>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
