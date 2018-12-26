@@ -20,43 +20,66 @@ Page({
    * 页面的初始数据
    */
   data:{
-    latitude:'30',
-    longitude:'120'
+    latitude:'',
+    longitude:'',
+    locationString:'11'
   },
   /**
    * 生命周期函数--监听页面加载
    */
+  //初始化获取精度和纬度坐标
   onLoad: function (options) {
     var that = this;
-    wx.getLocation({
-      type: 'wgs84',
-      success(res) {
-        const latitude = res.latitude
-        const longitude = res.longitude
-        that.setData({
-          latitude,
-          longitude
+    //promise执行异步函数
+    function getLoac(){
+      return new Promise(function(resolve,reject){
+        wx.getLocation({
+          type: 'wgs84',
+          success(res) {
+            resolve(res)
+          }
         });
-      }
-    });
-    var demo = new QQMapWX({
-      key: '2NFBZ-A57WP-3JGDC-L3ZUL-TLMCJ-HNF7N' // 必填
-    });
-    demo.reverseGeocoder({
-      location: {
-        latitude: that.data.latitude,
-        longitude: that.data.longitude
-      },
-      success: function (res) {
-        console.log(res);
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-      complete: function (res) {
-        console.log(res);
-      }
-    });
+      })
+    }
+    function changePot(){ 
+      return new Promise(function(resolve,reject){
+        //将精度和维度转化为地址坐标
+        var demo = new QQMapWX({
+          key: '2NFBZ-A57WP-3JGDC-L3ZUL-TLMCJ-HNF7N' // 必填
+        });
+        demo.reverseGeocoder({
+          location: {
+            latitude: that.data.latitude,
+            longitude: that.data.longitude
+          },
+          success: function (res) {
+            console.log(res.result.address);
+            that.setData.locationString = res.result.address;
+            console.log(that.setData.locationString)
+            resolve(res);
+          },
+          fail: function (res) {
+            //console.log(res);
+          },
+          complete: function (res) {
+            //console.log(res);
+          }
+        });
+      })
+    }
+    
+    getLoac()
+    .then((res) => {//promise函数异步调用
+      const latitude = res.latitude
+      const longitude = res.longitude
+      that.setData({
+        latitude,
+        longitude
+      });
+      changePot();
+    }).then((res)=>{
+      console.log('then'+res);
+    })
   },
 
   /**
