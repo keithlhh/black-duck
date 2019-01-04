@@ -1,0 +1,41 @@
+<!--pages/profile/profile.wxml-->
+<view class='avatar'>
+  <view>
+    <image src='../../img/images/avatar.png'></image>
+    <view>用户名</view>
+  </view>
+</view>
+<!-- 用户信息 -->
+<view class='item'>
+  <view class='item-list'>
+    <view class='item-left'>
+      <image src='../../img/tabs/profile-active.png'></image>
+      <text>用户信息</text>
+    </view>
+    <view class='item-icon'></view>
+  </view>
+  <view class='item-list'>
+    <view class='item-left'>
+      <image src='../../img/tabs/home-active.png'></image>
+      <text>优惠券管理</text>
+    </view>
+    <view class='item-icon'></view>
+  </view>
+  <view class='item-list'>
+    <view class='item-left'>
+      <image src='../../img/tabs/profile-active.png'></image>
+      <text>配送地址管理</text>
+    </view>
+    <view class='item-icon'></view>
+  </view>
+  <view class='item-list item-last'>
+    <view class='item-left'>
+      <image src='../../img/tabs/message-active.png'></image>
+      <text>使用须知</text>
+    </view>
+    <view class='item-icon'></view>
+  </view>
+  <view class='tuichu'>
+    <button>退出登录</button>
+  </view>
+</view>

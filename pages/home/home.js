@@ -1,6 +1,14 @@
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 Page({
+  waimai(){
+    wx.navigateTo({
+      url: '/pages/diancan/diancan',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   getLocation:function(){
     this.choAddr();
   },

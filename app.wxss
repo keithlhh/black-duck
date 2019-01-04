@@ -8,3 +8,29 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.item-icon{
+  width: 30rpx;
+  height: 30rpx;
+  border: 2px solid #999;
+  border-top: none;
+  border-right: none;
+  transform-origin: 50% 50%;
+  transform: rotate(225deg);
+  line-height: 30rpx;
+  margin-bottom: rpx;
+}
+.item-left image{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.item-list{
+  margin-top: 35rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx 0 50rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ccc;
+}

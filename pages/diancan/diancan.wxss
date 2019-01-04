@@ -1,0 +1,133 @@
+/* pages/diancan/diancan.wxss */
+.header{
+  padding-top: 30rpx;
+  font-size: 32rpx;
+  display: flex;
+  height: 150rpx;
+  background: #ccc;
+}
+.header .dian{
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: middle;
+  margin: 0 40rpx;
+  box-shadow: 2px 2px 4px #888888;
+}
+.header .yingye{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+}
+.header-right{
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+swiper{
+  padding-left: 30rpx;
+  height: 60rpx;
+  font-size: 25rpx;
+  background: #ccc;
+
+}
+/* 右边箭头 */
+.btm-icon{
+  width: 20rpx;
+  height: 20rpx;
+  border: 1px solid #999;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 40rpx;
+  top:180rpx;
+}
+.order{
+  display: flex;
+}
+.order .order-left{
+  width: 25%;
+  height: 800rpx;
+  background: #ccc;
+  font-size: 28rpx;
+  text-align: center;
+  overflow: auto;
+}
+.order .order-left view{
+  padding: 20rpx 0;
+}
+.order .order-right{
+  width: 75%;
+  height: 800rpx;
+  overflow: auto;
+}
+/* 选中时的样式 */
+.check{
+  background: #fff;
+}
+.order-right .left-food image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 30rpx;
+}
+.food-item{
+  display: flex;
+  padding: 20rpx 30rpx;
+  border: 1rpx solid #ddd;
+}
+/* 右侧食品样式 */
+.food-dtl{
+  height: 150rpx;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.calc{
+  display: flex;
+  justify-content: space-between;
+}
+/* 按钮 */
+.left-btn{
+  display: inline-block;
+  border: 1rpx solid orange;
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50% 50%;
+  text-align: center;
+  line-height: 38rpx;
+}
+.food-money{
+  color: #f00;
+}
+.right-btn{
+  background: orange;
+}
+/* footer */
+.footer{
+  display: flex;
+  font-size: 30rpx;
+}
+.footer image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 30rpx;
+}
+.foot-mon{
+  color: #f00;
+  font-size: 35rpx;
+}
+.foot-mid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.foot-calc{
+  height: 100rpx;
+  width: 200rpx;
+  background: #f00;
+  text-align: center;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
+}

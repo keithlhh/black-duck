@@ -1,0 +1,63 @@
+<!--pages/diancan/diancan.wxml-->
+<view class='header'>
+  <view>
+    <image class='dian' src='../../img/banner/banner1.png'></image>
+  </view>
+  <view class='header-right'>
+    <view>周黑鸭(浙江杭州文三路店)</view>
+    <view class='yingye'>门店营业时间：每天10:00-24:40</view>
+  </view>
+</view>
+<!-- 轮播 -->
+<view class='lp'>
+  <swiper autoplay='true' interval='3000' circular='true' vertical='true' indicator-active-color="#fff">
+    <block>
+      <swiper-item>
+        本餐厅支持优惠卷
+      </swiper-item>
+    </block>
+    <block>
+      <swiper-item>
+        本餐厅支持在线支付
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='btm-icon'>
+  </view>
+</view>
+<!-- 点餐 -->
+<view class='order'>
+  <view class='order-left'>
+    <view wx:for="{{menu}}" class='{{item.id==num?"check":""}}' data-id='{{item.id}}' wx:key="index" bindtap='check'>{{item.food}}</view>
+  </view>
+  <!-- 食物 -->
+  <view class='order-right'>
+    <view class='food-item' wx:for="item of 3">
+      <view class='left-food'>
+        <image src="../../img/images/niupai.png"></image>
+      </view>
+      <view class='food-dtl'>
+        <view>卤鸭脖大盒 320g</view>
+        <view class='calc'>
+          <text class='food-money'>￥38</text>
+          <view>
+            <view>
+              <text class='left-btn'>- </text> 2
+              <text class='left-btn right-btn' bindtap=''> +</text>
+            </view>
+            <!-- <text>已售罄</text> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 小计 -->
+<view class='footer'>
+  <image src='../../img/icons/grid-01.png'></image>
+  <view class='foot-mid'>
+    <text class='foot-mon'>78</text>
+    <text>外送费￥6</text>
+  </view>
+  <view class='foot-calc'>去结算</view>
+</view>

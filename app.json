@@ -1,13 +1,38 @@
 {
   "pages": [
+    "pages/diancan/diancan",
+    "pages/profile/profile",
     "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./img/tabs/home.png",
+        "selectedIconPath": "./img/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "./img/tabs/message.png",
+        "selectedIconPath": "./img/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "./img/tabs/profile.png",
+        "selectedIconPath": "./img/tabs/profile-active.png"
+      }
+    ]
   }
 }

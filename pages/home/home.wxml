@@ -18,10 +18,34 @@
   autoplay='true'
   interval='3000'
   circular='true'
+  indicator-dots='true'
+  indicator-active-color="#fff"
 >
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
     <swiper-item>
       <image src="{{item}}" class="slide-image"/>
     </swiper-item>
   </block>
 </swiper>
+<!-- 点餐 -->
+<view class='diancan'>
+  <view bindtap='waimai'>外卖点餐</view>
+  <view>到店点餐</view>
+</view>
+<!-- 图片展示 -->
+<view class='img-fir'>
+  <view class='fir-left'>
+    <image lazy-load='true' src='../../img/banner/banner1.png'></image>
+  </view>
+  <view class='fir-right'>
+    <view>
+      <image lazy-load='true' src='../../img/banner/banner1.png'></image>
+    </view>
+    <view>
+      <image lazy-load='true' src='../../img/banner/banner1.png'></image>
+    </view>
+  </view>
+</view>
+<view class='big-img'>
+  <image src='../../img/banner/banner1.png'></image>
+</view>
