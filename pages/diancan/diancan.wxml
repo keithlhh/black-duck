@@ -32,7 +32,7 @@
   </view>
   <!-- 食物 -->
   <view class='order-right'>
-    <view class='food-item' wx:for="item of 3">
+    <view class='food-item' wx:for="item of 3" wx:key="item">
       <view class='left-food'>
         <image src="../../img/images/niupai.png"></image>
       </view>

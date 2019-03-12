@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/diancan/diancan",
-    "pages/profile/profile",
     "pages/home/home",
     "pages/index/index",
+    "pages/diancan/diancan",
+    "pages/profile/profile",
     "pages/logs/logs",
     "pages/order/order"
   ],

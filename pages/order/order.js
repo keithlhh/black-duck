@@ -1,5 +1,8 @@
 // pages/order/order.js
 Page({
+  goToSP(){
+    console.log("hello")
+  },
 
   /**
    * 页面的初始数据
